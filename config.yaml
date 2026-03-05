@@ -5,6 +5,12 @@ model_list:
       aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
       aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
       aws_region_name: us-east-1
+  - model_name: claude-opus-4-6
+    litellm_params:
+      model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
+      aws_access_key_id: os.environ/AWS_ACCESS_KEY_ID
+      aws_secret_access_key: os.environ/AWS_SECRET_ACCESS_KEY
+      aws_region_name: us-east-1
   - model_name: claude-sonnet-4-5
     litellm_params:
       model: bedrock/us.anthropic.claude-sonnet-4-5-20250929-v1:0
@@ -20,3 +26,9 @@ model_list:
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
+
+litellm_settings:
+  num_retries: 2
+  allowed_fails: 1
+  fallbacks:
+    - claude-opus-4-6: [claude-sonnet-4-5]
