@@ -31,4 +31,5 @@ litellm_settings:
   num_retries: 2
   allowed_fails: 1
   fallbacks:
-    - claude-opus-4-6: [claude-sonnet-4-5]
+    - claude-opus-4-6: [claude-sonnet-4-5, claude-haiku-4-5]
+    - claude-sonnet-4-5: [claude-haiku-4-5]
