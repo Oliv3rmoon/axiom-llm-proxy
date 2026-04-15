@@ -26,11 +26,11 @@ model_list:
   - model_name: glm-5.1
     litellm_params:
       model: zai/glm-5.1
-      api_key: os.environ/ZAI_API_KEY
+      api_key: 88c25075020046ce879286a8eeb00774.0NkwAXrNYlU8WmzD
   - model_name: glm-5
     litellm_params:
       model: zai/glm-5
-      api_key: os.environ/ZAI_API_KEY
+      api_key: 88c25075020046ce879286a8eeb00774.0NkwAXrNYlU8WmzD
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
