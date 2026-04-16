@@ -36,8 +36,14 @@ general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
 
 litellm_settings:
-  num_retries: 2
-  allowed_fails: 1
+  num_retries: 3
+  allowed_fails: 2
+  cooldown_time: 30
   fallbacks:
     - claude-opus-4-6: [claude-sonnet-4-5, claude-haiku-4-5]
     - claude-sonnet-4-5: [claude-haiku-4-5]
+    - glm-5.1: [claude-sonnet-4-5, claude-haiku-4-5]
+    - glm-5: [claude-sonnet-4-5, claude-haiku-4-5]
+  context_window_fallbacks:
+    - glm-5.1: [claude-sonnet-4-5]
+    - glm-5: [claude-sonnet-4-5]
