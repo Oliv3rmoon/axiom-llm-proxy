@@ -38,7 +38,7 @@ model_list:
       api_base: https://api.venice.ai/api/v1
   - model_name: venice-large
     litellm_params:
-      model: openai/qwen3-235b
+      model: openai/llama-3.3-70b
       api_key: VENICE_ADMIN_KEY_zNyNVOUUwyjVqPhzjyFFg3f-A8pfUdBswGb5aCx2Ip
       api_base: https://api.venice.ai/api/v1
 
