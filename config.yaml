@@ -31,6 +31,16 @@ model_list:
     litellm_params:
       model: zai/glm-5
       api_key: 88c25075020046ce879286a8eeb00774.0NkwAXrNYlU8WmzD
+  - model_name: venice-uncensored
+    litellm_params:
+      model: openai/venice-uncensored
+      api_key: VENICE_ADMIN_KEY_zNyNVOUUwyjVqPhzjyFFg3f-A8pfUdBswGb5aCx2Ip
+      api_base: https://api.venice.ai/api/v1
+  - model_name: venice-large
+    litellm_params:
+      model: openai/qwen3-235b
+      api_key: VENICE_ADMIN_KEY_zNyNVOUUwyjVqPhzjyFFg3f-A8pfUdBswGb5aCx2Ip
+      api_base: https://api.venice.ai/api/v1
 
 general_settings:
   master_key: os.environ/LITELLM_MASTER_KEY
@@ -44,6 +54,8 @@ litellm_settings:
     - claude-sonnet-4-5: [claude-haiku-4-5]
     - glm-5.1: [claude-sonnet-4-5, claude-haiku-4-5]
     - glm-5: [claude-sonnet-4-5, claude-haiku-4-5]
+    - venice-uncensored: [venice-large]
+    - venice-large: [venice-uncensored]
   context_window_fallbacks:
     - glm-5.1: [claude-sonnet-4-5]
     - glm-5: [claude-sonnet-4-5]
